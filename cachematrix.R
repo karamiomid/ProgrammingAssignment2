@@ -2,6 +2,8 @@
 ## functions do
 
 ## Write a short comment describing this function
+## These functions create a matrix and solve it to get the inverse however it also stores the inverse.
+## Therefore the inverse is not recalculated over and over again
 
 makeCacheMatrix <- function(x = matrix()){
   inv <- NULL
@@ -17,6 +19,9 @@ makeCacheMatrix <- function(x = matrix()){
 
 
 ## Write a short comment describing this function
+## cacheSolve will call the cached value of the inverted matrix, 
+## if it exists. If the cached inverted matrix doesn't exist, it will
+## invert the matrix itself.
 
 cacheSolve <- function(x, ...){
   inv <- x$getInverse()
